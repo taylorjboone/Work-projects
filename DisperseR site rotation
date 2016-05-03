@@ -1,0 +1,82 @@
+# Loads the package
+library(disperseR)
+
+# Reads .txt file containing data
+mapdata<-read.table(file="C:/Users/Moran Lab/My Documents/Raw Data/USGS rotated site data/treedata.txt", sep="\t", fill = TRUE,head=TRUE)
+
+# Creates subplots from the overarching data set
+bbbpipo<-subset(mapdata,PLOT== "BBBPIPO")
+ccrpipo<-subset(mapdata,PLOT== "CCRPIPO")
+crcrpipo<-subset(mapdata, PLOT== "CRCRPIPO")
+emridge<-subset(mapdata,PLOT== "EMRIDGE")
+emsalix<-subset(mapdata, PLOT== "EMSALIX")
+emslope<-subset(mapdata, PLOT== "EMSLOPE")
+ffs2burn<-subset(mapdata, PLOT== "FFS2BURN")
+ffs5burn<-subset(mapdata, PLOT== "FFS5BURN")
+ffs6burn<-subset(mapdata, PLOT== "FFS6BURN")
+ffs7control<-subset(mapdata, PLOT== "FFS7CONTROL")
+frpije<-subset(mapdata, PLOT== "FRPIJE")
+lmcc<-subset(mapdata, PLOT== "LMCC")
+logpije<-subset(mapdata, PLOT== "LOGPIJE")
+logsegi<-subset(mapdata, PLOT== "LOGSEGI")
+lolog<-subset(mapdata, PLOT== "LOLOG")
+lothar<-subset(mapdata, PLOT== "LOTHAR")
+pgamba<-subset(mapdata, PLOT== "PGAMBA")
+poflabma<-subset(mapdata, PLOT== "POFLAMBA")
+sftrabma<-subset(mapdata, PLOT== "SFTRABMA")
+suabco<-subset(mapdata, PLOT== "SUABCO")
+supila<-subset(mapdata, PLOT== "SUPILA")
+surip<-subset(mapdata, PLOT== "SURIP")
+uplog<-subset(mapdata, PLOT== "UPLOG")
+upthar<-subset(mapdata, PLOT== "UPTHAR")
+wtamba<-subset(mapdata, PLOT== "WTAMBA")
+yohopipo<-subset(mapdata, PLOT== "YOHOPIPO")
+
+map1<-rotatePlot(bbbpipo, method="bottomleft")
+pdf("bbbpipo.pdf")
+plot(map1$x,map1$y)
+dev.off()
+
+map2<-rotatePlot(emridge, method= "bottomleft")
+pdf("emridge.pdf")
+plot(map2$x,map2$y)
+dev.off()
+
+map3<-rotatePlot(emslope, method= "bottomleft")
+pdf("emslope.pdf")
+plot(map3$x,map3$y)
+dev.off()
+
+
+map4<-rotatePlot(frpije, method= "bottomleft")
+pdf("frpije.pdf")
+plot(map4$x,map4$y)
+dev.off()
+
+
+map5<-rotatePlot(lmcc, method= "bottomleft")
+pdf("lmcc.pdf")
+plot(map5$x,map5$y)
+dev.off()
+
+
+map6<-rotatePlot(logsegi, method= "bottomleft")
+pdf("logsegi.pdf")
+plot(map6$x,map6$y)
+dev.off()
+
+
+map7<-rotatePlot(suabco, method= "bottomleft")
+pdf("suabco.pdf")
+plot(map7$x,map7$y)
+dev.off()
+
+map8<-rotatePlot(supila, method= "bottomleft")
+pdf("supila.pdf")
+plot(map8$x,map8$y)
+dev.off()
+
+map9<-rotatePlot(surip, method= "bottomleft")
+pdf("surip.pdf")
+plot(map9$x,map9$y)
+dev.off()
